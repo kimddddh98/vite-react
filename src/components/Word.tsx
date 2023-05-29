@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {  useState } from 'react';
 
 interface Word{
   id: number ;
@@ -48,7 +48,6 @@ const Word = ({word}:Props)=>{
     })
     .then(res=>{
       if(res.ok){
-        console.log(res.ok)
         setIsDone(!isDone)
       }
     })
