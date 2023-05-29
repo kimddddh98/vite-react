@@ -27,11 +27,6 @@ const Word = ({word}:Props)=>{
           setIsDeleted(true)
         }
       })
-      // .then(res=>{
-      //   if(res.ok){
-      //     setWord({id:0})
-      //   }
-      // })
     }
     
   }
@@ -39,7 +34,6 @@ const Word = ({word}:Props)=>{
     return null; // 삭제된 항목은 렌더링하지 않음
   }
   function toggleIsDone(){
-    console.log(word.id)
     fetch(`http://localhost:3001/words/${word.id}`,{
       method:'PUT',
       headers:{
