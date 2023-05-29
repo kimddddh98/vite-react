@@ -10,8 +10,6 @@ export default function Header(){
         <div className="menu">
           <a href="#x" className='link'>
             단어추가
-            {import.meta.env.VITE_TEST_DATA}
-            {import.meta.env.MODE}
           </a>
           <a href="#x" className='link'>
             day 추가

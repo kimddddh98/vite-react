@@ -7,11 +7,6 @@ import Day from './components/Day'
 import EmptyPage from '@/components/EmptyPage'
 
 function App() {
- 
-  //  function changeName(){
-  //   const newName = name==='kim'?'lee':'sin'
-  //   setName(newName)
-  //  }
   return (
     <BrowserRouter>
       <div className="App">
