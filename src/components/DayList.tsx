@@ -12,6 +12,7 @@ export default function DayList(){
   
   return(
     <>
+      할일목록
       {days.length===0&&<span>loading..</span>}
       <ul className="list_day">
         {
