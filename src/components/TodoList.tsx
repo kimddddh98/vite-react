@@ -1,41 +1,56 @@
 import { useState } from 'react'
-import { json } from 'stream/consumers'
+import { Link } from 'react-router-dom'
 
 interface TypeTodo{
   id: number
   name:string
   isDone:false
 }
-interface Props{
-  todo:TypeTodo
+interface BoardList{
+  
+  id: number,
+  userId: string
+  title: string
+  content: string
+  date: string
+  
 }
-export default function TodoList({todo}:Props){
-  const [todoDone,setTodoDone] = useState(todo.isDone)
+interface Props{
+  view:BoardList
+  index:number
+}
+export default function TodoList({view,index}:Props){
+  // const [todoDone,setTodoDone] = useState<boolean>(todo.isDone)
 
-  function isDonePut(){
-    fetch(`http://localhost:3002/todo/${todo.id}`,{
-      method:'PUT',
-      headers:{
-        'Content-Type':'application/json'
+  // function isDonePut(){
+  //   fetch(`http://localhost:3001/todo/${todo.id}`,{
+  //     method:'PUT',
+  //     headers:{
+  //       'Content-Type':'application/json'
 
-      },
-      body:JSON.stringify({
-        ...todo,
-        isDone:!todoDone
-      })
-    })
-    .then(res=>{
-      if(res.ok) setTodoDone(!todoDone)
-    })
-  }
+  //     },
+  //     body:JSON.stringify({
+  //       ...todo,
+  //       isDone:!todoDone
+  //     })
+  //   })
+  //   .then(res=>{
+  //     if(res.ok) setTodoDone(!todoDone)
+  //   })
+  // }
   return(
     <>
-      <li>
-        {todo.name}
-        <label>
-          <input type="checkbox" onChange={isDonePut} checked={todoDone}/>
-        </label>
-      </li>
+      <tr>
+        <th>{index}</th>
+        <td>
+          <Link to={`/todo/${view.id}`} state={{data:view}}>
+            {view.title}
+          </Link>
+        </td>
+        <th>{view.userId}</th>
+        <th>{view.date}</th>
+      </tr>
+  
     </>
   )
 }

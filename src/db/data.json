@@ -19,18 +19,6 @@
     {
       "day": 5,
       "id": 5
-    },
-    {
-      "day": 6,
-      "id": 6
-    },
-    {
-      "day": 7,
-      "id": 7
-    },
-    {
-      "day": 8,
-      "id": 8
     }
   ],
   "words": [
@@ -47,27 +35,6 @@
       "eng": "car",
       "kor": "자동차",
       "isDone": false
-    },
-    {
-      "id": 5,
-      "day": 3,
-      "eng": "school",
-      "kor": "학교",
-      "isDone": false
-    },
-    {
-      "id": 6,
-      "day": 3,
-      "eng": "pencil",
-      "kor": "연필",
-      "isDone": false
-    },
-    {
-      "day": "3",
-      "eng": "window",
-      "kor": "창문",
-      "isDone": false,
-      "id": 7
     },
     {
       "day": "3",
@@ -103,41 +70,94 @@
       "kor": "사과",
       "isDone": false,
       "id": 12
+    }
+  ],
+  "view": [
+    {
+      "id": 1,
+      "userId": "admin",
+      "title": "게시판 제목",
+      "content": "게시판 내용",
+      "date": "2023/05/01"
     },
     {
-      "eng": "hand",
-      "kor": "손",
-      "day": "3",
-      "isDone": false,
-      "id": 13
+      "id": 2,
+      "userId": "admin",
+      "title": "새글",
+      "content": "새글쓰기",
+      "date": "2022/04/22"
     },
     {
-      "eng": "computer",
-      "kor": "컴퓨터",
-      "day": "1",
-      "isDone": false,
-      "id": 14
+      "title": "게시판 새글 테스트",
+      "userId": "user01",
+      "content": "user01 post 테스트",
+      "date": "2023-05-31T15:56:02.173Z",
+      "id": 3
     },
     {
-      "eng": "move",
-      "kor": "이동",
-      "day": "2",
-      "isDone": false,
-      "id": 15
+      "title": "일기",
+      "userId": "kim",
+      "content": "일기 작성?",
+      "date": "2023-05-31T15:57:05.986Z",
+      "id": 4
+    }
+  ],
+  "reply": [
+    {
+      "id": 1,
+      "viewId": 1,
+      "content": "댓글1",
+      "userId": "admin",
+      "date": ""
     },
     {
-      "eng": "dog",
-      "kor": "로미",
-      "day": "8",
-      "isDone": false,
-      "id": 16
+      "id": 2,
+      "viewId": 2,
+      "content": "댓글2",
+      "userId": "admin",
+      "date": ""
     },
     {
-      "eng": "test",
-      "kor": "시험",
-      "day": "",
-      "isDone": false,
-      "id": 19
+      "viewId": 1,
+      "content": "asd",
+      "userId": "댓글 관리자",
+      "date": "2023-05-31T13:10:44.043Z",
+      "id": 3
+    },
+    {
+      "viewId": 2,
+      "content": "댓글 테스트 2112\n",
+      "userId": "댓글 관리자",
+      "date": "2023-05-31T15:31:54.516Z",
+      "id": 4
+    },
+    {
+      "viewId": 2,
+      "content": "ㅁㄴㅇㅁㄴㅇ",
+      "userId": "댓글 관리자",
+      "date": "2023-05-31T15:31:59.344Z",
+      "id": 5
+    },
+    {
+      "viewId": 3,
+      "content": "댓글",
+      "userId": "댓글 관리자",
+      "date": "2023-05-31T15:56:37.461Z",
+      "id": 6
+    },
+    {
+      "viewId": 4,
+      "content": "ㄴ마ㅓㅇ린머ㅏㅣㅇ러ㅣㅏㄴㅁㄹ\n\n",
+      "userId": "댓글 관리자",
+      "date": "2023-05-31T15:57:28.267Z",
+      "id": 7
+    }
+  ],
+  "todo": [
+    {
+      "id": 1,
+      "name": "시험접수",
+      "isDone": false
     }
   ]
 }

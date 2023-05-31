@@ -18,8 +18,8 @@ export default function DayList(){
         {
           days.map(day=>(
             <li key={day.id}>
-              <Link to={`/day/${day.day}`}></Link>
-              Day:{day.day}
+              <Link to={`/day/${day.day}`}>Day:{day.day}</Link>
+              
               </li>
           ))
         }

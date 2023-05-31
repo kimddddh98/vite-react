@@ -11,7 +11,7 @@ export default function Header(){
       <header>
         <div className="header">
           <h1>
-            <Link to="/">토익 영단어(고급)</Link>
+            <Link to="/">영단어</Link>
           </h1>
 
 
@@ -31,8 +31,8 @@ export default function Header(){
           <Link to='create_day'>day추가</Link>
         </>)
         :(<>
-        <Link to='create_todo'>투두추가</Link>
-        <Link to='create_date'>일정</Link>
+        <Link to='create_todo'>게시글 작성</Link>
+        <Link to='create_date'>일정추가</Link>
         </>)}
       
       </div>
