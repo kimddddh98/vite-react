@@ -1,4 +1,4 @@
-import useFetch from '@/hooks/useFetch'
+import { ENV } from '@/hooks/useEnv'
 import { FormEvent, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -10,7 +10,7 @@ export default function CreateTodo(){
   async function write(e:FormEvent) {
     e.preventDefault();
     
-    const res= await fetch('http://localhost:3001/view',{
+    const res= await fetch(ENV+'/view',{
       method:'POST',
       headers:{
         'Content-Type':'application/json'

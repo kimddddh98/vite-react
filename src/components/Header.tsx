@@ -5,7 +5,7 @@ export default function Header(){
   // console.log(useParams())
   const path = useLocation().pathname
 
-  console.log(path)
+  // console.log(path)
   return(
     <>
       <header>

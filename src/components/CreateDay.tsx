@@ -1,6 +1,7 @@
 import useFetch from '@/hooks/useFetch'
 import { FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
+import {ENV} from '@/hooks/useEnv'
 interface Days{
   id:number,
   day:number
@@ -9,11 +10,11 @@ interface Days{
 export default function CreateDay(){
 
   const nav = useNavigate()
-  const days:Days[]= useFetch('http://localhost:3001/days')
+  const days:Days[]= useFetch(ENV+'/days')
 
   function addDay(e:FormEvent){
     e.preventDefault()
-    fetch(`http://localhost:3001/days`,{
+    fetch(`${ENV}/days`,{
       method:'POST',
       headers:{
         'Content-Type':'application/json'

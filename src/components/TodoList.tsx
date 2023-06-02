@@ -1,11 +1,6 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-interface TypeTodo{
-  id: number
-  name:string
-  isDone:false
-}
+
 interface BoardList{
   
   id: number,
@@ -23,7 +18,7 @@ export default function TodoList({view,index}:Props){
   // const [todoDone,setTodoDone] = useState<boolean>(todo.isDone)
 
   // function isDonePut(){
-  //   fetch(`http://localhost:3001/todo/${todo.id}`,{
+  //   fetch(`http://localhost:3030/todo/${todo.id}`,{
   //     method:'PUT',
   //     headers:{
   //       'Content-Type':'application/json'

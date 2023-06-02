@@ -1,6 +1,7 @@
+import { ENV } from '@/hooks/useEnv'
 import useFetch from '@/hooks/useFetch'
 import {  FormEvent, useState } from 'react'
-import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 interface BoardList{
   
   id: number,
@@ -22,13 +23,13 @@ export default function TodoDetail(){
   const [replyText,setReplyText] = useState('')
   const location = useLocation()
   const viewData:BoardList = location.state.data
-  const reply:Reply[] = useFetch(`http://localhost:3001/reply?viewId=${viewData.id}`)
+  const reply:Reply[] = useFetch(`${ENV}/reply?viewId=${viewData.id}`)
   const nav = useNavigate()
   async function replyPost(e:FormEvent){
     
     e.preventDefault()
     if(replyText.length>0){
-      const post = await fetch('http://localhost:3001/reply',{
+      const post = await fetch(ENV+'/reply',{
       method:'POST',
       headers:{
         'Content-Type':'application/json'

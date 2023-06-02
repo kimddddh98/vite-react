@@ -13,6 +13,7 @@ import CreateDate from './components/CreateDate'
 import TodoDetail from './components/TodoDetail'
 
 function App() {
+  console.table(import.meta.env)
   return (
     <BrowserRouter>
       <div className="App">

@@ -1,11 +1,12 @@
 import useFetch from '@/hooks/useFetch'
 import TodoList from './TodoList'
+import { ENV } from '@/hooks/useEnv'
 
-interface TypeTodo{
-  id: number
-  name:string
-  isDone:false
-}
+// interface TypeTodo{
+//   id: number
+//   name:string
+//   isDone:false
+// }
 interface BoardList{
   
   id: number,
@@ -16,7 +17,7 @@ interface BoardList{
   
 }
 export default function Todo(){
-  const Board:BoardList[] = useFetch('http://localhost:3001/view')
+  const Board:BoardList[] = useFetch(ENV+'/view')
   
   return(
     <>

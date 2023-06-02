@@ -1,5 +1,6 @@
+import { ENV } from '@/hooks/useEnv'
 import useFetch from '@/hooks/useFetch'
-import {  FormEvent, useRef, useState } from 'react'
+import {  FormEvent, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 interface Days{
   id:number,
@@ -9,10 +10,10 @@ interface Days{
 export default function CreateWord(){
 
   const nav = useNavigate()
-  const days:Days[]= useFetch('http://localhost:3001/days')
-  const engRef = useRef<HTMLInputElement>(null)
-  const korRef = useRef<HTMLInputElement>(null)
-  const dayRef = useRef<HTMLSelectElement>(null)
+  const days:Days[]= useFetch(ENV+'/days')
+  // const engRef = useRef<HTMLInputElement>(null)
+  // const korRef = useRef<HTMLInputElement>(null)
+  // const dayRef = useRef<HTMLSelectElement>(null)
 
   const [eng,setEng] = useState('')
   const [kor,setKor] = useState('')
@@ -26,7 +27,7 @@ export default function CreateWord(){
     setLoading(true)
     if(!isLoading){
       e.preventDefault()
-    fetch(`http://localhost:3001/words`,{
+    fetch(ENV+`/words`,{
       method:'POST',
       headers:{
         'Content-Type':'application/json'

@@ -1,4 +1,5 @@
 // import db from '@/db/data.json'
+import { ENV } from '@/hooks/useEnv'
 import useFetch from '@/hooks/useFetch'
 import {Link} from 'react-router-dom'
 interface Days{
@@ -6,9 +7,9 @@ interface Days{
   day:number
 }
 export default function DayList(){
-  const days:Days[]= useFetch('http://localhost:3001/days')
+  const days:Days[]= useFetch(ENV+'/days')
   
-  
+  console.log(ENV)
   
   return(
     <>

@@ -1,3 +1,4 @@
+import { ENV } from '@/hooks/useEnv';
 import {  useState } from 'react';
 
 interface Word{
@@ -19,7 +20,7 @@ const Word = ({word}:Props)=>{
   const [isDeleted, setIsDeleted] = useState(false);
   function deleteIsDone(){
     if(confirm('삭제하시겠습니까?')){
-      fetch(`http://localhost:3001/words/${word.id}`,{
+      fetch(`${ENV}/words/${word.id}`,{
         method:'DELETE'
       })
       .then(res=>{
@@ -34,7 +35,7 @@ const Word = ({word}:Props)=>{
     return null; // 삭제된 항목은 렌더링하지 않음
   }
   function toggleIsDone(){
-    fetch(`http://localhost:3001/words/${word.id}`,{
+    fetch(`${ENV}/words/${word.id}`,{
       method:'PUT',
       headers:{
         'Content-Type':'application/json'
